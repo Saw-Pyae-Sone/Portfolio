@@ -1,0 +1,24 @@
+[
+    {
+        "role": "FrontEnd Developer",
+        "company": "ABC Corp",
+        "duration": "Jan 2020 - Dec 2022",
+        "jobtype": "Full-time",
+        "achievements": [
+            "Developed a dynamic user interface using React.js.",
+            "Improved website performance by 30%."
+        ],
+        "logo": "/my-app/src/images/email-icon.png"
+    },
+    {
+        "role": "Backend Developer",
+        "company": "XYZ Agency",
+        "duration": "Jan 2023 - Present",
+        "jobtype": "Full-time",
+        "achievements": [
+          "Redesigned e-commerce platform, increasing sales by 20%.",
+          "Integrated secure payment gateways."
+        ],
+        "logo": "/my-app/src/images/email-icon.png"
+    }
+]
