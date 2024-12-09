@@ -13,7 +13,7 @@ function App() {
 
   const fetchAPI = async () => {
     try{
-      const response = await axios.get("http://localhost:8080/api");
+      const response = await axios.get("http://localhost:8080/api/fruits");
       setArray(response.data.fruits);
       console.log(response.data.fruits);
     }catch(error){ 

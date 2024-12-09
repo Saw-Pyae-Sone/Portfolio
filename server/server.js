@@ -7,8 +7,12 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get("/api", (req, res) => {
+app.get("/api/fruits", (req, res) => {
     res.json({fruits: ["apple", "orange", "pineapple"]})
+});
+
+app.get("/api/skills", (req, res) => {
+    res.json({skills: ['Node.js', 'Django', 'HTML', 'CSS', 'React', 'Tailwind css', 'TypeScript', 'Express.js', 'PHP', 'jQuery']})
 });
 
 app.listen(8080, () => {
