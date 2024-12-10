@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "../experience.css";
+import axios from "axios";
 
 interface Props {
     role: string;
@@ -47,28 +48,11 @@ const ExperienceSection = () => {
 
     useEffect (() => {
         const fetchData = async () => {
-
-            const binId = '674d23b7e41b4d34e45e214a';
-            const apiKey = '$2a$10$C7rWFvkXz6.uc6s4KwIjJ.eQ2x.H5Raw4coG2UXQ7IFxdV7eU0a7W';
             
             try {
-                const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
-                    method: 'GET',
-                    headers: {
-                        'X-Master-Key': apiKey,
-                    },
-                });
-                if(!response.ok){
-                    throw new Error("Network response not OK")
-                };
-                const data = await response.json();
-                console.log(data);
-
-                if (data && Array.isArray(data.record)) {
-                    setExperience(data.record);
-                } else {
-                    throw new Error("Data is not in the expected format.");
-                }
+                const response = await axios.get("http://localhost:8080/api/experience");
+                console.log(response.data);
+                setExperience(response.data.record.experience);
             } catch (error) {
                 console.error("Error Fetching data", error);
             } finally{
@@ -85,7 +69,7 @@ const ExperienceSection = () => {
 
     return (
         <div className="experience-cards-container">
-            {
+            {experience && experience.length > 0 ? ( 
             experience.map((exp, index) => (
                 <ExperienceCard
                     key={index}
@@ -96,7 +80,10 @@ const ExperienceSection = () => {
                     achievements={exp.achievements}
                     logo={exp.logo}
                 />
-            ))}
+            ))
+            ): (
+                <p>No experiences Available</p>
+            )}
         </div>
     );
 };

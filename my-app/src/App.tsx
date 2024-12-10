@@ -7,6 +7,7 @@ import ExperienceSection from './components/exp';
 import Skills from './components/skills';
 import ContactUs from './components/contactUs';
 import axios from 'axios';
+import Education from './components/education';
 
 function App() {
   const [array, setArray] = useState([]);
@@ -37,6 +38,7 @@ function App() {
         ))
       }
       <ExperienceSection />
+      <Education />
       <Skills />
       <Cards />
       <ContactUs />
