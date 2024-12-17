@@ -11,7 +11,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", async (req, res) => {
-    res.send("Hello from Node.js Server")
+    res.status(200).send("Hello from Node.js Server")
 })
 
 app.get("/api/education", async (req, res) => {

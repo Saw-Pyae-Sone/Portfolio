@@ -1,0 +1,29 @@
+/* Global tooltip styling */
+[data-tooltips] {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  [data-tooltips]::after {
+    content: attr(data-tooltips); /* Get the tooltip text from the attribute */
+    position: absolute;
+    bottom: 150%; /* Adjust to position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: #fff; /* White text */
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  [data-tooltips]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px); /* Add slight animation upward */
+  }
+  

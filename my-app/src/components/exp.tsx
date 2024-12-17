@@ -14,7 +14,6 @@ interface Props {
 const ExperienceCard: React.FC<Props>= ({role, company,duration, jobtype, achievements, logo}) => {
     return(
         <>
-            <h1>Experience</h1>
             <div className="experience-card-horizontal">
                 <img src={logo} alt={`${company} logo`} className="company-logo" />
                 <div className="experience-content">
@@ -69,6 +68,7 @@ const ExperienceSection = () => {
 
     return (
         <div className="experience-cards-container">
+            <h1>Experience</h1>
             {experience && experience.length > 0 ? ( 
             experience.map((exp, index) => (
                 <ExperienceCard

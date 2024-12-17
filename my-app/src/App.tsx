@@ -8,6 +8,7 @@ import Skills from './components/skills';
 import ContactUs from './components/contactUs';
 import axios from 'axios';
 import Education from './components/education';
+import './index.css';
 
 function App() {
   const [array, setArray] = useState([]);
@@ -27,16 +28,16 @@ function App() {
   }, []);
 
   return (
-    <> 
+    <>
       <NavBar />
       <Intro />
-      {
+      {/* {
         array.map((fruit, index) => (
           <div key={index}>
             <p>{fruit}</p>
           </div>
         ))
-      }
+      } */}
       <ExperienceSection />
       <Education />
       <Skills />
