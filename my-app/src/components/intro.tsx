@@ -1,10 +1,10 @@
-import Profileimg from '../images/_.jpeg'
+import Profileimg from '../../public/images/_.jpeg'
 import { DiGithubBadge } from "react-icons/di";
 import { FaLinkedin } from "react-icons/fa";
-import { SiMinutemailer } from "react-icons/si";
 import { IoMdDownload } from "react-icons/io";
 import CopyButton from "./email";
 import '../../src/tooltips.css';
+import '../../src/wave-underline.css';
 
 const Intro = () => {
     return(
@@ -14,9 +14,9 @@ const Intro = () => {
                     <img src={Profileimg} alt="Profile Image" className="img-fuild img-thumbnail" />
                 </div>
                 <div className='px-12'>
-                    <h1>Hi, I am Teo</h1>
+                    <h1 className='wave-underline'>BackEnd Developer</h1>
                     <p className='pt-2'>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, laboriosam. Accusantium laudantium sint nostrum blanditiis et quibusdam labore recusandae sed, ipsa odio explicabo illo sequi, aliquam impedit pariatur facilis inventore?
+                        Specialized in Back End Development with Node.js, Express.js, PHP 8.3, Django. I have a solid knowledge of React.js, Typescrpt.js and Next.js. Basically, I am just a Javascript Enjoyer.
                     </p>
                     <div className='flex space-x-3 pt-2'>
 

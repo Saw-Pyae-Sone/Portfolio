@@ -31,7 +31,8 @@ const Education = () => {
 
     return(
         <>
-            <ul>
+            <ul className="container justify-content">
+                <h1 className="">Education</h1>
                 {array.map((edu, index) => (
                     <li key={index}>
                         <p>Degree: {edu.Degree}</p>

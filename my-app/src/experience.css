@@ -1,50 +1,117 @@
-.experience-cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Container for the entire experience section */
+.experience-section {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
   }
   
-  .experience-card-horizontal {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 15px 0;
-    background-color: #f8ffe5;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-  }
-  
-  .company-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 15px;
-  }
-  
-  .experience-content {
-    flex: 1;
-  }
-  
-  .experience-content h3 {
-    margin: 0 0 10px;
+  /* Title Styling */
+  .experience-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
     color: #333;
   }
   
-  .experience-content p {
-    margin: 5px 0;
-    color: #555;
+  /* Timeline Container */
+  .timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .experience-content ul {
-    margin: 10px 0 0;
-    padding-left: 20px;
+  /* Central Line */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  .experience-content ul li {
-    margin-bottom: 5px;
-    color: #444;
+  /* Experience Card Container */
+  .experience-card-container {
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Left Card Styling */
+  .left-card {
+    justify-content: flex-end;
+    text-align: left;
+  }
+  
+  /* Right Card Styling */
+  .right-card {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  /* Experience Card */
+  .experience-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 400px;
+    border: 2px solid #007bff;
+  }
+  
+  /* Connector Dots */
+  .experience-card-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  /* Adjust Dot Position for Left and Right */
+  .left-card::after {
+    left: calc(100% + 8px);
+  }
+  
+  .right-card::after {
+    left: calc(-8px);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .experience-card-container {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .left-card,
+    .right-card {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .timeline-container::before {
+      left: 10px;
+      transform: none;
+    }
+  
+    .experience-card-container::after {
+      left: 10px;
+    }
   }
   

@@ -56,7 +56,7 @@ app.get("/api/fruits", async (req, res) => {
 });
 
 app.get("/api/skills", async (req, res) => {
-    res.json({skills: ['Node.js', 'Django', 'HTML', 'CSS', 'React', 'Tailwind css', 'TypeScript', 'Express.js', 'PHP', 'jQuery']})
+    res.json({skills: ['Node.js', 'Django', 'React.js', 'Tailwind css', 'TypeScript', 'Express.js', 'PHP', 'jQuery']})
 });
 
 app.listen(8080, () => {

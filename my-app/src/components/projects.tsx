@@ -1,5 +1,5 @@
-import projectImg from '../images/First Aid At Home – Paperart for Laviva Magazine - Katrin Rodegast.jpeg'
-import github from '../images/github.png'
+import projectImg from '../../public/images/First Aid At Home – Paperart for Laviva Magazine - Katrin Rodegast.jpeg'
+import github from '../../public/images/github.png'
 
 const programminglists = ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'jQuery'];
 
